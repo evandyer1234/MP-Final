@@ -18,4 +18,11 @@ public class Interact : MonoBehaviour
         Point = cam.ScreenToWorldPoint(Input.mousePosition);
         Point.z = 0;
     }
+
+    public float GetDistanceTo(Vector3 main, Vector3 Other)
+    {
+        float distanceTo = (Other - main).magnitude;
+
+        return distanceTo;
+    }
 }

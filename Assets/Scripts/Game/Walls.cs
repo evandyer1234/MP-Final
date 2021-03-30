@@ -9,11 +9,14 @@ public class Walls : Interact
     public Walls top, bottom;
     public Vector3 TopLeft, BottomRight;
     public bool segment = false;
+
     [Tooltip("If true, collisions will be floors and ceilings, of not it will be left and right")]
     public bool TopWall = true;
 
     [Tooltip("Amount of velocity lost hitting a wall, leave at 1 if no velocity will be lost")]
     public float bouncedeg = 1f;
+    public float downtime = 0.1f;
+    float current;
 
     Renderer rend;
     public override void Start()
@@ -26,7 +29,7 @@ public class Walls : Interact
             TopLeft = top.TopLeft;
             BottomRight = bottom.BottomRight;
         }
-
+        current = downtime;
     }
     public void Awake()
     {
@@ -40,6 +43,7 @@ public class Walls : Interact
     }
     public void FixedUpdate()
     {
+        current -= Time.fixedDeltaTime;
         if (segment)
         {
             this.enabled = false;
@@ -75,13 +79,17 @@ public class Walls : Interact
 
     public virtual void OnHit()
     {
-        if (TopWall)
+        if (current <= 0)
         {
-            player.VelocityDir = new Vector3(player.VelocityDir.x, -player.VelocityDir.y, player.VelocityDir.z);
-        }
-        else
-        {
-            player.VelocityDir = new Vector3(-player.VelocityDir.x, player.VelocityDir.y, player.VelocityDir.z);
+            if (TopWall)
+            {
+                player.VelocityDir = new Vector3(player.VelocityDir.x, -player.VelocityDir.y, player.VelocityDir.z);
+            }
+            else
+            {
+                player.VelocityDir = new Vector3(-player.VelocityDir.x, player.VelocityDir.y, player.VelocityDir.z);
+            }
+            current = downtime;
         }
     }
 }
