@@ -79,6 +79,8 @@ public class Walls : Interact
 
     public virtual void OnHit()
     {
+
+        Debug.Log(gameObject.name);
         if (current <= 0)
         {
             if (TopWall)

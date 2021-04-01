@@ -16,7 +16,15 @@ public class Player : PhysObject
         }
         Respawnpos = transform.position;
     }
-   
+
+    private void Awake()
+    {
+        foreach (Interact i in FindObjectsOfType<Interact>())
+        {
+            i.player = this;
+        }
+    }
+
     void Update()
     {
         position = transform.position;
@@ -25,5 +33,6 @@ public class Player : PhysObject
     public void Die()
     {
         transform.position = Respawnpos;
+        VelocityDir = new Vector3(0, 0, 0);
     }
 }

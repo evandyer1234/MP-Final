@@ -98,7 +98,12 @@ MonoBehaviour:
   Point: {x: 0, y: 0, z: 0}
   cam: {fileID: 0}
   custombounds: 0
+  longwall: 0
+  top: {fileID: 0}
+  bottom: {fileID: 0}
   TopLeft: {x: 0, y: 0, z: 0}
   BottomRight: {x: 0, y: 0, z: 0}
+  segment: 0
   TopWall: 0
   bouncedeg: 1
+  downtime: 0.05

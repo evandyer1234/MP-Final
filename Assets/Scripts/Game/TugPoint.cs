@@ -24,18 +24,12 @@ public class TugPoint : Interact
         else
         {
             active = false;
+            source.mute = true;
         }
         if (active)
         {
             ApplyForce();
         }
-    }
-
-    public float GetDistanceTo(Vector3 main, Vector3 Other)
-    {
-        float distanceTo = (Other - main).magnitude;
-
-        return distanceTo;
     }
 
     public virtual void ApplyForce()

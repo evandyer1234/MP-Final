@@ -106,4 +106,4 @@ MonoBehaviour:
   segment: 0
   TopWall: 1
   bouncedeg: 1
-  downtime: 0.1
+  downtime: 0.05
