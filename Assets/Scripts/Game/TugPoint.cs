@@ -8,10 +8,12 @@ public class TugPoint : Interact
     public AudioSource source;
     bool active = false;
     public float radius = 1f;
+    public LineRenderer line;
 
     public void Awake()
     {
         source.mute = true;
+        line.SetPosition(0, gameObject.transform.position);
     }
 
     public override void Update()
@@ -25,6 +27,7 @@ public class TugPoint : Interact
         {
             active = false;
             source.mute = true;
+            line.gameObject.SetActive(false);
         }
         if (active)
         {
@@ -39,16 +42,20 @@ public class TugPoint : Interact
             if (GetDistanceTo(transform.position, Point) <= radius)
             {
                 source.mute = false;
+                line.gameObject.SetActive(true);
+                line.SetPosition(1, player.gameObject.transform.position);
                 player.AddForce((transform.position - player.gameObject.transform.position).normalized, tugforce);
             }
             else
             {
+                line.gameObject.SetActive(false);
                 source.mute = true;
             }
         }
         if (Input.GetMouseButtonUp(0))
         {
             source.mute = true;
+            line.gameObject.SetActive(false);
         }
     }
 }

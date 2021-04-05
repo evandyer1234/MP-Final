@@ -11105,6 +11105,11 @@ PrefabInstance:
       propertyPath: Sections.Array.data[1]
       value: 
       objectReference: {fileID: 822053371}
+    - target: {fileID: 1820353438180380900, guid: b5e439183ba6923428154054d912c985,
+        type: 3}
+      propertyPath: movespeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8922763249673596763, guid: b5e439183ba6923428154054d912c985,
         type: 3}
       propertyPath: m_Name

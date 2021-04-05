@@ -12,7 +12,7 @@ public class logic : MonoBehaviour
 
     void Start()
     {
-        
+        Time.timeScale = 1f;
     }
 
     
@@ -53,6 +53,7 @@ public class logic : MonoBehaviour
     }
     public void NextLevel()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void QuitGame()
