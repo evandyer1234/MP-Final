@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  movespeed: 20
+  movespeed: 40
   moving: 0
   mindis: 0.1
   OnCamMoveEnd:
@@ -106,3 +106,4 @@ MonoBehaviour:
   OnCamMoveStart:
     m_PersistentCalls:
       m_Calls: []
+  Sections: []
