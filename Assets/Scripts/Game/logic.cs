@@ -67,4 +67,8 @@ public class logic : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+    public void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
