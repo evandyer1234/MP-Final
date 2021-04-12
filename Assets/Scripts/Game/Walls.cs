@@ -18,6 +18,9 @@ public class Walls : Interact
     public float downtime = 0.1f;
     float current;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     Renderer rend;
     public override void Start()
     {
@@ -83,6 +86,7 @@ public class Walls : Interact
         Debug.Log(gameObject.name);
         if (current <= 0)
         {
+            source.PlayOneShot(clip);
             if (TopWall)
             {
                 player.VelocityDir = new Vector3(player.VelocityDir.x, -player.VelocityDir.y, player.VelocityDir.z);
