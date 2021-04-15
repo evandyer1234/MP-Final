@@ -35,4 +35,9 @@ public class Player : PhysObject
         transform.position = Respawnpos;
         VelocityDir = new Vector3(0, 0, 0);
     }
+
+    public void setspawn(Vector3 pos)
+    {
+        Respawnpos = pos;
+    }
 }
