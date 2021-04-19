@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamMove : MonoBehaviour
+public class CamMove : Interact
 {
     public GameObject prevScreen, newScreen, Target;
-    Camera cam;
+    public GameObject spawnpoint;
     CamControl cc;
     
-    void Start()
+    public override void Start()
     {
-        cam = Camera.main;
+        base.Start();
         cc = cam.gameObject.GetComponent<CamControl>();
     }
 
@@ -18,5 +18,6 @@ public class CamMove : MonoBehaviour
     public void Changed()
     {
         cc.ScreenChange(Target, newScreen, prevScreen );
+        player.setspawn(spawnpoint.transform.position);
     }
 }

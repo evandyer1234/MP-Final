@@ -38,6 +38,8 @@ public class Player : PhysObject
 
     public void setspawn(Vector3 pos)
     {
+        pos.z = 0;
         Respawnpos = pos;
+        
     }
 }
