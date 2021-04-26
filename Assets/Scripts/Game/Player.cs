@@ -42,4 +42,14 @@ public class Player : PhysObject
         Respawnpos = pos;
         
     }
+
+    public void SetVelocity(Vector3 vel)
+    {
+        VelocityDir = vel;
+    }
+
+    public void FreezeVelocity()
+    {
+        VelocityDir = new Vector3(0, 0, 0);
+    }
 }

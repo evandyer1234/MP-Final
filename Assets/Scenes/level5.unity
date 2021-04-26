@@ -11855,6 +11855,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da4ec4adb30badf48bbf4e20a72e770f, type: 3}
+--- !u!1 &246587244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246587245}
+  m_Layer: 0
+  m_Name: spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246587245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246587244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.55, y: -2.23, z: -69.590096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &248584424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2652461275398779856, guid: da4ec4adb30badf48bbf4e20a72e770f,
@@ -12164,9 +12194,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc551a76a6282f4098d4f6680e75491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Point: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
   prevScreen: {fileID: 905670363}
   newScreen: {fileID: 822053371}
   Target: {fileID: 446402204}
+  spawnpoint: {fileID: 246587244}
 --- !u!1 &343280552
 GameObject:
   m_ObjectHideFlags: 0
@@ -14412,9 +14446,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc551a76a6282f4098d4f6680e75491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Point: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
   prevScreen: {fileID: 822053371}
   newScreen: {fileID: 905670363}
   Target: {fileID: 343280552}
+  spawnpoint: {fileID: 246587244}
 --- !u!1 &807306964
 GameObject:
   m_ObjectHideFlags: 0
@@ -20210,6 +20248,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da4ec4adb30badf48bbf4e20a72e770f, type: 3}
+--- !u!1 &1875725474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875725475}
+  m_Layer: 0
+  m_Name: spawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1875725475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875725474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.89, y: -6.91, z: -69.590096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877084910
 GameObject:
   m_ObjectHideFlags: 0
@@ -21734,6 +21802,11 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 446402204}
+    - target: {fileID: 4622774207567329127, guid: e7fb1ad2ccac3bf428c2d9ef0c03c418,
+        type: 3}
+      propertyPath: spawnpoint
+      value: 
+      objectReference: {fileID: 1875725474}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7fb1ad2ccac3bf428c2d9ef0c03c418, type: 3}
 --- !u!1001 &2652461276667607389
@@ -21821,7 +21894,7 @@ MonoBehaviour:
   Point: {x: 0, y: 0, z: 0}
   cam: {fileID: 0}
   custombounds: 0
-  longwall: 1
+  longwall: 0
   top: {fileID: 0}
   bottom: {fileID: 0}
   TopLeft: {x: 0, y: 0, z: 0}
@@ -21968,9 +22041,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc551a76a6282f4098d4f6680e75491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Point: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
   prevScreen: {fileID: 0}
   newScreen: {fileID: 0}
   Target: {fileID: 0}
+  spawnpoint: {fileID: 0}
 --- !u!1 &5592684014873655162
 GameObject:
   m_ObjectHideFlags: 0

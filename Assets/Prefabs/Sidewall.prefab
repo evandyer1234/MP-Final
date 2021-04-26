@@ -107,7 +107,7 @@ MonoBehaviour:
   segment: 0
   TopWall: 0
   bouncedeg: 1
-  downtime: 0.05
+  downtime: 0.09
   source: {fileID: 5095371156767021212}
   clip: {fileID: 8300000, guid: faf4cd5ffb0b8cf49a64b232b02a65a3, type: 3}
 --- !u!82 &5095371156767021212
