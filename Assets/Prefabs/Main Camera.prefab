@@ -99,7 +99,7 @@ MonoBehaviour:
   target: {fileID: 0}
   movespeed: 40
   moving: 0
-  mindis: 0.1
+  mindis: 0.2
   OnCamMoveEnd:
     m_PersistentCalls:
       m_Calls: []
